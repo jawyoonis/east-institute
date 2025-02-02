@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-blue-100 bg-gradient-to-rpy-12 px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
       <div>
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -9,8 +9,8 @@
           Be among the first to experience our platform when we launch.
         </p>
       </div>
-      <form class="mt-8 space-y-6 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg" @submit.prevent="handleSubmit">
-        <div class="rounded-md shadow-sm -space-y-px">
+      <form class="mt-8 space-y-6 bg-white p-8 rounded-lg shadow-lg" @submit.prevent="handleSubmit">
+        <div class="space-y-4">
           <div class="relative">
             <label for="first-name" class="sr-only">First Name</label>
             <input
@@ -20,7 +20,7 @@
               autocomplete="given-name"
               required
               v-model="firstName"
-              class="appearance-none rounded-t-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+              class="appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="First Name"
             />
             <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">👤</span>
@@ -34,7 +34,7 @@
               autocomplete="family-name"
               required
               v-model="lastName"
-              class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+              class="appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="Last Name"
             />
             <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">👤</span>
@@ -48,7 +48,7 @@
               autocomplete="email"
               required
               v-model="email"
-              class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+              class="appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="Email address"
             />
             <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">📧</span>
@@ -60,7 +60,7 @@
               name="course"
               required
               v-model="selectedCourse"
-              class="appearance-none relative block w-full px-3 py-2 border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+              class="appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             >
               <option value="" disabled>Select a course</option>
               <option v-for="course in courses" :key="course" :value="course">

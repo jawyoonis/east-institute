@@ -47,40 +47,6 @@
           </div>
         </form>
       </div>
-  
-      <!-- Blog Posts List -->
-      <div>
-        <h2 class="text-2xl font-semibold mb-4">📚 Published Posts</h2>
-        <div v-if="posts.length === 0" class="text-gray-500">No posts available.</div>
-        <div class="grid gap-6">
-          <div
-            v-for="post in posts"
-            :key="post.id"
-            class="bg-white p-6 rounded-lg shadow-md flex justify-between items-start"
-          >
-            <div>
-              <h3 class="text-xl font-bold mb-2">{{ post.title }}</h3>
-              <p class="text-gray-700">{{ post.content }}</p>
-            </div>
-            <div class="flex items-center space-x-4">
-              <button
-                @click="editPost(post)"
-                class="text-blue-500 hover:text-blue-700 transition-colors duration-300"
-                aria-label="Edit Post"
-              >
-                ✏️
-              </button>
-              <button
-                @click="deletePost(post.id)"
-                class="text-red-500 hover:text-red-700 transition-colors duration-300"
-                aria-label="Delete Post"
-              >
-                🗑️
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   </template>
