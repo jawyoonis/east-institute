@@ -5,7 +5,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/east-institute/', // Replace with your GitHub repository name
+  base: process.env.NODE_ENV === 'production' ? '/east-institute/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -16,4 +16,3 @@ export default defineConfig({
     },
   },
 })
-
