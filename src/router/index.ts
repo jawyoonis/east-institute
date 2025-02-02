@@ -7,7 +7,7 @@ import CourseDetail from '../views/CourseDetail.vue';
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/about', name: 'About', component: () => import('../views/About.vue') },
-  // { path: '/blog', name: 'Blog', component: () => import('../views/Blog.vue') },
+  { path: "/blog", name: "BlogView", component: () => import("../views/BlogView.vue") },
   { path: '/waitlist', name: 'Waitlist', component: () => import('../views/Waitlist.vue') },
   { path: '/courses', name: 'Courses', component: CourseList },
   { path: '/courses/:id', name: 'CourseDetail', component: CourseDetail, props: true },
