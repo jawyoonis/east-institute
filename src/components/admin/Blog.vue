@@ -2,7 +2,7 @@
     <div class="flex justify-center items-center min-h-screen bg-blue-50">
     <div class="container mx-auto py-8 px-4">
       <h1 class="text-4xl font-extrabold mb-6 text-center">📝 Blog Management</h1>
-  
+
       <!-- Blog Post Form -->
       <div class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">{{ isEditing ? '✏️ Edit Post' : '🆕 Create New Post' }}</h2>
@@ -50,7 +50,7 @@
     </div>
   </div>
   </template>
-  
+
   <script>
   export default {
     name: 'Blog',
@@ -110,10 +110,9 @@
     },
   };
   </script>
-  
+
   <style scoped>
   .container {
     max-width: 800px;
   }
   </style>
-  

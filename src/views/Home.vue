@@ -1,30 +1,145 @@
 <template>
-    <main class="relative min-h-screen flex flex-col justify-between bg-gradient-to-b from-blue-100 to-white">
-      <!-- Hero Section -->
-      <section class="flex flex-col items-center justify-center text-center flex-grow px-4 sm:px-6">
-        <h1 class="text-3xl sm:text-4xl font-bold">Coming Soon</h1>
-        <p class="mt-2 text-sm sm:text-base">
-          Building Africa's Future Through STEM and Business Education!
-        </p>
-        <router-link to="/waitlist">
-          <button class="mt-5 px-4 py-2 sm:px-5 sm:py-2 bg-black text-white rounded-md hover:bg-gray-800 transition">
-            Join The Waitlist
-          </button>
-        </router-link>
-      </section>
-  
-      <!-- Footer -->
-      <Footer />
-    </main>
-  </template>
-  
-  <script>
-  import Footer from '@/components/Footer.vue';
-  export default {
-    name: 'Home',
-    components: {
-      Footer,
-    },
-  };
-  </script>
-  
+  <main class="relative min-h-screen flex flex-col justify-between bg-gradient-to-b from-blue-100 to-white font-tech">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center flex-grow px-4 sm:px-6 mt-20">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+        Bridging the Industry-Education Gap
+      </h1>
+      <p class="mt-3 text-sm sm:text-base text-gray-700 max-w-2xl">
+        Practical education in technology, business, and innovation to help you succeed.
+      </p>
+      <router-link to="/curriculum">
+        <button
+          class="mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+          Explore Curriculum
+        </button>
+      </router-link>
+    </section>
+
+    <!-- Category Section with Clickable Animated Images -->
+    <section class="mt-16 mb-24 px-6 sm:px-12 flex flex-col items-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl">
+        <div v-for="(category, index) in categories" :key="category.title" class="flex flex-col items-center">
+          <!-- Clickable Image Navigating to Respective Page -->
+          <router-link :to="category.route">
+            <div
+              class="relative w-64 h-72 rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+              :class="'animate-slide-back-forth'"
+            >
+              <img :src="category.image" :alt="category.title" class="w-full h-full object-cover instant-load">
+              <div class="absolute bottom-0 w-full bg-black bg-opacity-50 p-2 text-white text-sm sm:text-base font-bold text-center">
+                {{ category.title }}
+              </div>
+            </div>
+          </router-link>
+
+          <!-- Styled and Animated Text -->
+          <div class="mt-3 text-center text-gray-800 text-sm sm:text-base font-medium tracking-wide animate-slide-up">
+            <p v-for="text in category.description" :key="text" class="mb-2">
+              {{ text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer />
+  </main>
+</template>
+
+<script>
+import technology from '../assets/images/technology.jpg';
+import business from '../assets/images/business.jpg';
+import entrepreneurship from '../assets/images/entrepreneurship.jpg';
+
+export default {
+  name: 'Home',
+  mounted() {
+    // Preload images to ensure instant appearance
+    this.preloadImages([technology, business, entrepreneurship]);
+  },
+  methods: {
+    preloadImages(images) {
+      images.forEach(image => {
+        const img = new Image();
+        img.src = image;
+      });
+    }
+  },
+  data() {
+    return {
+      categories: [
+        {
+          title: "TECHNOLOGY",
+          image: technology,
+          route: "/technology",
+          description: [
+            "Computer Science",
+            "Software Development",
+            "Machine Learning",
+            "Data Science"
+          ]
+        },
+        {
+          title: "BUSINESS",
+          image: business,
+          route: "/business-info",
+          description: [
+            "Accounting & Finance",
+            "Marketing & Sales",
+            "Leadership & Management",
+            "Strategic Planning"
+          ]
+        },
+        {
+          title: "ENTREPRENEURSHIP",
+          image: entrepreneurship,
+          route: "/entrepreneurship",
+          description: [
+            "Startup Development",
+            "Product Innovation",
+            "Business Strategy",
+            "Scaling & Growth"
+          ]
+        }
+      ]
+    };
+  }
+};
+</script>
+
+<style scoped>
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.font-tech {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Ensures images load immediately */
+.instant-load {
+  will-change: transform;
+  opacity: 1 !important;
+}
+
+/* Slide Up Animation for Text */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Back-and-Forth Animation for Images */
+@keyframes slideBackForth {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0px); }
+}
+.animate-slide-back-forth {
+  animation: slideBackForth 3s ease-in-out infinite;
+}
+</style>

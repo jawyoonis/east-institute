@@ -1,7 +1,8 @@
 <template>
+  <div class="flex justify-center items-center min-h-screen bg-blue-50">
     <section>
       <h1 class="text-3xl font-bold mb-6">Manage Curriculum</h1>
-  
+
       <!-- Course List -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div v-for="course in curriculum" :key="course.id" class="bg-gray-50 p-6 rounded-lg shadow">
@@ -12,7 +13,7 @@
           </button>
         </div>
       </div>
-  
+
       <!-- Add New Course Form -->
       <div class="mt-8 bg-white p-6 rounded-lg shadow">
         <h2 class="text-2xl font-semibold mb-4">Add New Course</h2>
@@ -45,8 +46,9 @@
         </form>
       </div>
     </section>
+  </div>
   </template>
-  
+
   <script>
   export default {
     data() {
@@ -79,4 +81,3 @@
     },
   };
   </script>
-  

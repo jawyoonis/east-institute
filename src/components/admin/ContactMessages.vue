@@ -1,10 +1,11 @@
 <template>
+   <div class="flex justify-center items-center min-h-screen bg-blue-50">
     <section>
       <h1 class="text-3xl font-bold mb-6">Contact Messages</h1>
-  
+
       <!-- No Messages -->
       <div v-if="messages.length === 0" class="text-gray-500">No messages available.</div>
-  
+
       <!-- Messages Table -->
       <div v-else class="overflow-x-auto">
         <table class="min-w-full bg-white shadow-md rounded-lg">
@@ -46,8 +47,9 @@
         </table>
       </div>
     </section>
+  </div>
   </template>
-  
+
   <script>
   export default {
     data() {
@@ -65,4 +67,3 @@
     },
   };
   </script>
-  

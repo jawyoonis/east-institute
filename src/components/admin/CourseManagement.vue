@@ -1,4 +1,5 @@
 <template>
+   <div class="flex justify-center items-center min-h-screen bg-blue-50">
     <section>
       <h1 class="text-3xl font-bold mb-6 text-center">Course Management</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -25,8 +26,9 @@
         </div>
       </div>
     </section>
+  </div>
   </template>
-  
+
   <script>
   export default {
     data() {
@@ -63,8 +65,7 @@
     },
   };
   </script>
-  
+
   <style scoped>
   /* Add any additional custom styles here */
   </style>
-  

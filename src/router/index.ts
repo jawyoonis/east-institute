@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import CourseList from '../views/CourseList.vue';
 import CourseDetail from '../views/CourseDetail.vue';
+import Technology from '@/components/curriculums/Technology.vue';
+import BusinessInfo from '@/components/curriculums/BusinessInfo.vue';
+import Entrepreneurship from '@/components/curriculums/Entrepreneurship.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -13,6 +16,11 @@ const routes = [
   { path: '/courses/:id', name: 'CourseDetail', component: CourseDetail, props: true },
   {path:'/Contact',name:'Contact',component: () => import('../views/Contact.vue')},
   {path:'/AdminDashboard',name:'AdminDashboard',component: () => import('../views/AdminDashboard.vue')},
+
+  { path: '/technology', name: 'Technology', component: Technology },
+  { path: '/business-info', name: 'BusinessInfo', component: BusinessInfo },
+  { path: '/entrepreneurship', name: 'Entrepreneurship', component: Entrepreneurship },
+
   {
     path: '/curriculum',
     name: 'Curriculum',
