@@ -1,13 +1,13 @@
 <template>
-  <div class="flex justify-center items-center min-h-screen bg-blue-50">
+  <div class="flex justify-center items-center min-h-screen bg-white">
     <section>
-      <h1 class="text-3xl font-bold mb-6">Manage Curriculum</h1>
+      <h1 class="text-3xl font-bold mb-6 text-gray-900">Manage Curriculum</h1>
 
       <!-- Course List -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div v-for="course in curriculum" :key="course.id" class="bg-gray-50 p-6 rounded-lg shadow">
-          <h2 class="text-xl font-semibold text-blue-800">{{ course.title }}</h2>
-          <p class="text-gray-600 mt-2">{{ course.description }}</p>
+        <div v-for="course in curriculum" :key="course.id" class="bg-gray-100 p-6 rounded-lg shadow">
+          <h2 class="text-xl font-semibold text-gray-900">{{ course.title }}</h2>
+          <p class="text-gray-700 mt-2">{{ course.description }}</p>
           <button @click="removeCourse(course.id)" class="mt-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
             Remove
           </button>
@@ -15,8 +15,8 @@
       </div>
 
       <!-- Add New Course Form -->
-      <div class="mt-8 bg-white p-6 rounded-lg shadow">
-        <h2 class="text-2xl font-semibold mb-4">Add New Course</h2>
+      <div class="mt-8 bg-gray-50 p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900">Add New Course</h2>
         <form @submit.prevent="addCourse">
           <div class="mb-4">
             <label for="title" class="block text-sm font-medium text-gray-700">Course Title</label>
@@ -47,37 +47,37 @@
       </div>
     </section>
   </div>
-  </template>
+</template>
 
-  <script>
-  export default {
-    data() {
-      return {
-        curriculum: [
-          { id: 1, title: 'STEM Program', description: 'Covers science, technology, engineering, and math courses.' },
-          { id: 2, title: 'Business & Entrepreneurship', description: 'Teaches financial literacy, management, and entrepreneurship.' },
-          { id: 3, title: 'Health & Medicine', description: 'Prepares students for medical careers with biology and healthcare courses.' },
-        ],
-        newCourse: {
-          title: '',
-          description: '',
-        },
-      };
-    },
-    methods: {
-      addCourse() {
-        if (!this.newCourse.title || !this.newCourse.description) {
-          alert('Please fill out all fields.');
-          return;
-        }
-        const newEntry = { ...this.newCourse, id: Date.now() };
-        this.curriculum.push(newEntry);
-        this.newCourse.title = '';
-        this.newCourse.description = '';
+<script>
+export default {
+  data() {
+    return {
+      curriculum: [
+        { id: 1, title: 'STEM Program', description: 'Covers science, technology, engineering, and math courses.' },
+        { id: 2, title: 'Business & Entrepreneurship', description: 'Teaches financial literacy, management, and entrepreneurship.' },
+        { id: 3, title: 'Health & Medicine', description: 'Prepares students for medical careers with biology and healthcare courses.' },
+      ],
+      newCourse: {
+        title: '',
+        description: '',
       },
-      removeCourse(courseId) {
-        this.curriculum = this.curriculum.filter(course => course.id !== courseId);
-      },
+    };
+  },
+  methods: {
+    addCourse() {
+      if (!this.newCourse.title || !this.newCourse.description) {
+        alert('Please fill out all fields.');
+        return;
+      }
+      const newEntry = { ...this.newCourse, id: Date.now() };
+      this.curriculum.push(newEntry);
+      this.newCourse.title = '';
+      this.newCourse.description = '';
     },
-  };
-  </script>
+    removeCourse(courseId) {
+      this.curriculum = this.curriculum.filter(course => course.id !== courseId);
+    },
+  },
+};
+</script>

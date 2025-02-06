@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center bg-blue-50 px-6 py-12">
+  <div class="min-h-screen flex flex-col items-center justify-center bg-white px-6 py-12">
     <!-- Page Title -->
     <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-6 animate-fade-in">
       Business Program: Learn, Innovate, Lead

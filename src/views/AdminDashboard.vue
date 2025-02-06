@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-gray-200">
+  <div class="min-h-screen flex flex-col bg-gray-100">
     <!-- Navbar -->
     <nav class="bg-white shadow-md px-6 sm:px-8 lg:px-10 h-16 flex items-center justify-between border-b">
       <div class="flex-1 flex justify-center">
-        <span class="px-6 py-2 rounded-md font-semibold bg-gray-300 text-gray-900 shadow-md">
+        <span class="px-6 py-2 rounded-md font-semibold bg-gray-200 text-gray-900 shadow-sm">
           {{ activeTabTitle }}
         </span>
       </div>
@@ -13,7 +13,7 @@
     <!-- Dashboard Layout -->
     <div class="flex flex-1">
       <!-- Sidebar -->
-      <aside :class="['bg-blue-800 text-white min-h-screen p-6', isSidebarOpen ? 'block' : 'hidden', 'sm:block w-64']">
+      <aside :class="['bg-gray-800 text-white min-h-screen p-6', isSidebarOpen ? 'block' : 'hidden', 'sm:block w-64']">
         <nav>
           <ul class="space-y-4">
             <li
@@ -22,7 +22,7 @@
               @click="changeTab(tab.key, tab.title)"
               :class="[
                 'cursor-pointer px-4 py-2 rounded-md transition',
-                currentTab === tab.key ? 'bg-blue-600 text-white' : 'hover:bg-blue-500 text-gray-300'
+                currentTab === tab.key ? 'bg-gray-600 text-white font-bold' : 'hover:bg-gray-700 text-gray-300'
               ]"
             >
               {{ tab.title }}
@@ -87,3 +87,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* Additional styling for improved aesthetics */
+body {
+  font-family: 'Inter', sans-serif;
+}
+</style>

@@ -1,89 +1,95 @@
 <template>
-    <div class="container mx-auto px-6 py-12 bg-blue-100">
-      <div class="text-center mb-10">
-        <h1 class="text-5xl font-extrabold text-gray-900">📚 Student Curriculum</h1>
-        <p class="text-lg text-gray-600 mt-3 max-w-3xl mx-auto">
-          Explore the different curricula designed to empower students with knowledge and skills.
-        </p>
-      </div>
+  <div class="container mx-auto px-6 py-12 bg-white">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-extrabold text-gray-900">Explore Curriculum</h1>
+      <p class="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
+        100% Remote Learning, Industry Mentorship, Project-Based Learning
+      </p>
 
-      <!-- Curriculum List -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div
-          v-for="curriculum in curricula"
-          :key="curriculum.id"
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+      <!-- Plan Selection Buttons -->
+      <div class="mt-6 flex justify-center space-x-4">
+        <button
+          class="px-6 py-2 border border-gray-400 text-gray-900 rounded-md hover:bg-gray-100 transition font-medium"
+          :class="{ 'bg-black text-white': selectedPlan === 'monthly' }"
+          @click="selectedPlan = 'monthly'"
         >
-          <h2 class="text-2xl font-bold text-blue-800 flex items-center">
-            <span class="mr-2">{{ curriculum.icon }}</span> {{ curriculum.title }}
-          </h2>
-          <p class="text-gray-600 mt-2">{{ curriculum.description }}</p>
-
-          <ul class="mt-4 space-y-2 text-gray-700">
-            <li v-for="subject in curriculum.subjects" :key="subject" class="flex items-center">
-              <span class="text-blue-500 mr-2">✔️</span> {{ subject }}
-            </li>
-          </ul>
-
-          <button
-            class="mt-5 w-full px-5 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-            View Curriculum
-          </button>
-        </div>
+          Monthly Plan
+        </button>
+        <button
+          class="px-6 py-2 border border-gray-400 text-gray-900 rounded-md hover:bg-gray-100 transition font-medium"
+          :class="{ 'bg-black text-white': selectedPlan === 'annual' }"
+          @click="selectedPlan = 'annual'"
+        >
+          Annual Plan
+        </button>
       </div>
     </div>
-  </template>
 
-  <script>
-  export default {
-    name: 'Curriculum',
-    data() {
-      return {
-        curricula: [
-          {
-            id: 1,
-            icon: '🌍',
-            title: 'STEM Program',
-            description: 'A comprehensive curriculum covering Science, Technology, Engineering, and Mathematics.',
-            subjects: ['Mathematics', 'Physics', 'Computer Science', 'Biology'],
-          },
-          {
-            id: 2,
-            icon: '💼',
-            title: 'Business & Economics',
-            description: 'Focused on business principles, economics, and entrepreneurship.',
-            subjects: ['Finance', 'Marketing', 'Entrepreneurship', 'Economics'],
-          },
-          {
-            id: 3,
-            icon: '🎨',
-            title: 'Arts & Humanities',
-            description: 'A program that enhances creativity and critical thinking through art and literature.',
-            subjects: ['History', 'Literature', 'Philosophy', 'Fine Arts'],
-          },
-          {
-            id: 4,
-            icon: '🩺',
-            title: 'Health & Medicine',
-            description: 'Designed for students pursuing careers in medicine and healthcare.',
-            subjects: ['Biology', 'Anatomy', 'Public Health', 'Medical Ethics'],
-          },
-          {
-            id: 5,
-            icon: '🚀',
-            title: 'Computer Science',
-            description: 'An advanced curriculum for students interested in coding and AI development.',
-            subjects: ['Python Programming', 'Machine Learning', 'Data Science', 'Cybersecurity'],
-          },
-        ],
-      };
-    },
-  };
-  </script>
+    <!-- Curriculum Content Section -->
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12 max-w-5xl mx-auto">
+      <!-- Curriculum Image -->
+      <div class="w-full md:w-1/3 flex justify-center">
+        <img src="@/assets/images/curriculam-1.webp" alt="Curriculum" class="rounded-lg shadow-lg w-full max-w-md object-cover">
+      </div>
 
-  <style scoped>
-  .container {
-    max-width: 1200px;
-  }
-  </style>
+      <!-- Curriculum Information -->
+      <div class="w-full md:w-2/3">
+        <transition name="fade" mode="out-in">
+          <div v-if="selectedPlan === 'monthly'" key="monthly">
+            <div class="border-l-4 border-gray-900 pl-6">
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">Monthly Plan</h2>
+              <p class="text-gray-600">Pay as you go with flexible learning options.</p>
+              <ul class="mt-4 space-y-3 text-gray-700 list-disc list-inside">
+                <li>Full access to all courses</li>
+                <li>Live mentorship sessions</li>
+                <li>Career support & guidance</li>
+                <li>Community networking</li>
+              </ul>
+              <p class="mt-6 text-lg font-semibold text-red-600">$49/month</p>
+            </div>
+          </div>
+
+          <div v-else key="annual">
+            <div class="border-l-4 border-gray-900 pl-6">
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">Annual Plan</h2>
+              <p class="text-gray-600">Commit for a year and enjoy premium benefits.</p>
+              <ul class="mt-4 space-y-3 text-gray-700 list-disc list-inside">
+                <li>Everything included in the Monthly Plan</li>
+                <li>Exclusive one-on-one mentorship</li>
+                <li>Personalized career guidance</li>
+                <li>Free access to workshops & masterclasses</li>
+              </ul>
+              <p class="mt-6 text-lg font-semibold text-red-600">$499/year (Save 15%)</p>
+            </div>
+          </div>
+        </transition>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Curriculum",
+  data() {
+    return {
+      selectedPlan: "monthly", // Default plan selection
+    };
+  },
+};
+</script>
+
+<style scoped>
+.container {
+  max-width: 1200px;
+}
+
+/* Smooth Fade Animation */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>

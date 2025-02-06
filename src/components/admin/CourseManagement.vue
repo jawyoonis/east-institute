@@ -1,7 +1,7 @@
 <template>
-   <div class="flex justify-center items-center min-h-screen bg-blue-50">
-    <section>
-      <h1 class="text-3xl font-bold mb-6 text-center">Course Management</h1>
+  <div class="flex justify-center items-center min-h-screen bg-white">
+    <section class="w-full max-w-6xl p-6">
+      <h1 class="text-3xl font-bold mb-6 text-center text-gray-900">Course Management</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="course in courses"
@@ -27,45 +27,42 @@
       </div>
     </section>
   </div>
-  </template>
+</template>
 
-  <script>
-  export default {
-    data() {
-      return {
-        courses: [
-          {
-            id: 1,
-            title: 'STEM Program',
-            description:
-              'Covers science, technology, engineering, and math courses.',
-            image: 'path/to/stem-image.jpg',
-          },
-          {
-            id: 2,
-            title: 'Business & Entrepreneurship',
-            description:
-              'Teaches financial literacy, management, and entrepreneurship.',
-            image: 'path/to/business-image.jpg',
-          },
-          {
-            id: 3,
-            title: 'Health & Medicine',
-            description:
-              'Prepares students for medical careers with biology and healthcare courses.',
-            image: 'path/to/health-image.jpg',
-          },
-        ],
-      };
+<script>
+export default {
+  data() {
+    return {
+      courses: [
+        {
+          id: 1,
+          title: 'STEM Program',
+          description: 'Covers science, technology, engineering, and math courses.',
+          image: 'path/to/stem-image.jpg',
+        },
+        {
+          id: 2,
+          title: 'Business & Entrepreneurship',
+          description: 'Teaches financial literacy, management, and entrepreneurship.',
+          image: 'path/to/business-image.jpg',
+        },
+        {
+          id: 3,
+          title: 'Health & Medicine',
+          description: 'Prepares students for medical careers with biology and healthcare courses.',
+          image: 'path/to/health-image.jpg',
+        },
+      ],
+    };
+  },
+  methods: {
+    removeCourse(courseId) {
+      this.courses = this.courses.filter((course) => course.id !== courseId);
     },
-    methods: {
-      removeCourse(courseId) {
-        this.courses = this.courses.filter((course) => course.id !== courseId);
-      },
-    },
-  };
-  </script>
+  },
+};
+</script>
 
-  <style scoped>
-  /* Add any additional custom styles here */
-  </style>
+<style scoped>
+/* Add any additional custom styles here */
+</style>

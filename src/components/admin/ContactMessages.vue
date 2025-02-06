@@ -1,5 +1,5 @@
 <template>
-   <div class="flex justify-center items-center min-h-screen bg-blue-50">
+   <div class="flex justify-center items-center min-h-screen bg-white">
     <section>
       <h1 class="text-3xl font-bold mb-6">Contact Messages</h1>
 
