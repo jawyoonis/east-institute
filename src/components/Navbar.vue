@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white shadow-md">
+  <nav class="bg-blue-100 border-b shadow-md">
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 h-20 flex justify-between items-center">
       <!-- Logo & Institute Name -->
       <div class="flex items-center space-x-4">
@@ -13,13 +13,13 @@
           v-for="link in navigation"
           :key="link.name"
           :to="link.path"
-          class="text-xs text-blue-700 font-semibold hover:text-blue-900 transition duration-300"
+          class="text-xs text-black font-semibold hover:text-gray-700 transition duration-300"
         >
           {{ link.name }}
         </router-link>
         <router-link
           to="/contact"
-          class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 text-xs font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
         >
           Contact Us
         </router-link>
@@ -38,14 +38,14 @@
           v-for="link in navigation"
           :key="link.name"
           :to="link.path"
-          class="text-xs text-blue-700 font-semibold hover:text-blue-900 transition duration-300"
+          class="text-xs text-black font-semibold hover:text-gray-700 transition duration-300"
           @click="toggleMenu"
         >
           {{ link.name }}
         </router-link>
         <router-link
           to="/contact"
-          class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 text-xs font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
           @click="toggleMenu"
         >
           Contact Us

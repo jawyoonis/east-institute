@@ -1,40 +1,40 @@
 <template>
-  <main class="relative min-h-screen flex flex-col justify-between bg-gradient-to-b from-blue-100 to-white font-tech">
+  <main class="relative min-h-screen flex flex-col justify-between bg-white font-tech">
     <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center text-center flex-grow px-4 sm:px-6 mt-20">
-      <h1 v-animate-onscroll="'animated fadeInDown'" class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+    <section class="flex flex-col items-center justify-center text-center flex-grow px-4 sm:px-6">
+      <h1 v-animate-onscroll="'animated fadeInDown'" class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
         Bridging the Industry-Education Gap
       </h1>
-      <p v-animate-onscroll="'animated fadeInUp'" class="mt-3 text-sm sm:text-base text-gray-700 max-w-2xl">
+      <p v-animate-onscroll="'animated fadeInUp'" class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl">
         Practical education in technology, business, and innovation to help you succeed.
       </p>
       <router-link to="/curriculum">
         <button v-animate-onscroll="'animated pulse'"
-          class="mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+          class="mt-6 px-6 py-3 bg-black text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
           Explore Curriculum
         </button>
       </router-link>
     </section>
 
     <!-- Category Section with Clickable Images -->
-    <section class="mt-16 mb-24 px-6 sm:px-12 flex flex-col items-center">
+    <section class="mt-12 mb-16 px-6 sm:px-12 flex flex-col items-center">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl">
         <div v-for="(category, index) in categories" :key="category.title" class="flex flex-col items-center">
           <!-- Clickable Image Navigating to Respective Page -->
           <router-link :to="category.route">
             <div
-              class="relative w-64 h-72 rounded-xl overflow-hidden shadow-lg animate-floating cursor-pointer hover:scale-105 transition-transform duration-300"
+              class="relative w-72 h-80 rounded-xl overflow-hidden shadow-lg animate-floating cursor-pointer hover:scale-105 transition-transform duration-300"
               :class="index % 2 === 0 ? 'animate-delay-1' : 'animate-delay-2'"
             >
               <img :src="category.image" :alt="category.title" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 w-full bg-black bg-opacity-50 p-2 text-white text-sm sm:text-base font-bold text-center">
+              <div class="absolute bottom-0 w-full bg-black bg-opacity-50 p-3 text-white text-lg font-bold text-center">
                 {{ category.title }}
               </div>
             </div>
           </router-link>
 
           <!-- Styled and Animated Text -->
-          <div class="mt-3 text-center text-gray-800 text-sm sm:text-base font-medium tracking-wide animate-slide-up">
+          <div class="mt-4 text-center text-gray-800 text-lg font-medium tracking-wide animate-slide-up">
             <p v-for="text in category.description" :key="text" class="mb-2">
               {{ text }}
             </p>
@@ -108,7 +108,7 @@ export default {
 /* Floating animation for images */
 @keyframes floating {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 .animate-floating {
@@ -119,7 +119,7 @@ export default {
 
 /* Slide Up Animation for Text */
 @keyframes slideUp {
-  0% { opacity: 0; transform: translateY(8px); }
+  0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0px); }
 }
 .animate-slide-up {
