@@ -6,6 +6,7 @@ import CourseDetail from '../views/CourseDetail.vue';
 import Technology from '@/components/curriculums/Technology.vue';
 import BusinessInfo from '@/components/curriculums/BusinessInfo.vue';
 import Entrepreneurship from '@/components/curriculums/Entrepreneurship.vue';
+import PaymentPage from '@/views/PaymentPage.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -20,6 +21,7 @@ const routes = [
   { path: '/technology', name: 'Technology', component: Technology },
   { path: '/business-info', name: 'BusinessInfo', component: BusinessInfo },
   { path: '/entrepreneurship', name: 'Entrepreneurship', component: Entrepreneurship },
+  { path: '/payment', name: 'Payment', component: PaymentPage },
 
   {
     path: '/curriculum',
