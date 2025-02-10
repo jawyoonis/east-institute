@@ -39,40 +39,29 @@
           <div v-if="selectedPlan === 'monthly'" key="monthly">
             <div class="border-l-4 border-gray-900 pl-6">
               <h2 class="text-2xl font-bold text-gray-900">Monthly Plan</h2>
-              <p class="text-gray-600 mt-1">Pay as you go with flexible learning options.</p>
+              <p class="text-gray-600 mt-1">Enjoy flexible learning options with our monthly plan.</p>
               <ul class="mt-4 text-gray-700 space-y-2">
                 <li>Access to all courses</li>
                 <li>Live mentorship sessions</li>
                 <li>Career support</li>
                 <li>Community networking</li>
               </ul>
-              <p class="mt-4 text-lg font-semibold text-red-600">$49/month</p>
             </div>
           </div>
 
           <div v-else key="annual">
             <div class="border-l-4 border-gray-900 pl-6">
               <h2 class="text-2xl font-bold text-gray-900">Annual Plan</h2>
-              <p class="text-gray-600 mt-1">Commit for a year and enjoy premium benefits.</p>
+              <p class="text-gray-600 mt-1">Commit for a year and enjoy additional benefits.</p>
               <ul class="mt-4 text-gray-700 space-y-2">
                 <li>Everything in Monthly Plan</li>
                 <li>Exclusive one-on-one mentorship</li>
                 <li>Personalized career guidance</li>
                 <li>Free access to workshops & masterclasses</li>
               </ul>
-              <p class="mt-4 text-lg font-semibold text-red-600">$499/year (Save 15%)</p>
             </div>
           </div>
         </transition>
-
-        <!-- Payment Button -->
-        <div class="mt-6 flex justify-center">
-          <router-link :to="`/payment?plan=${selectedPlan}`">
-            <button class="px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-900 transition duration-300">
-              Proceed to Payment
-            </button>
-          </router-link>
-        </div>
       </div>
     </div>
   </div>
