@@ -1,16 +1,16 @@
 <template>
-  <main class="relative min-h-screen flex flex-col justify-between bg-white font-tech">
+  <main class="relative min-h-screen flex flex-col justify-between bg-white font-tech pt-24">
     <!-- Hero Section -->
     <section class="flex flex-col items-center justify-center text-center flex-grow px-4 sm:px-6">
-      <h1 v-animate-onscroll="'animated fadeInDown'" class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+      <h1 v-animate-onscroll="'animated fadeInDown'" class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
         Bridging the Industry-Education Gap
       </h1>
-      <p v-animate-onscroll="'animated fadeInUp'" class="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl">
+      <p v-animate-onscroll="'animated fadeInUp'" class="mt-4 text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl">
         Practical education in technology, business, and innovation to help you succeed.
       </p>
       <router-link to="/curriculum">
         <button v-animate-onscroll="'animated pulse'"
-          class="mt-6 px-6 py-3 bg-black text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+          class="mt-6 px-4 py-2 bg-black text-white rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
           Explore Curriculum
         </button>
       </router-link>
@@ -18,12 +18,12 @@
 
     <!-- Category Section with Clickable Images -->
     <section class="mt-12 mb-16 px-6 sm:px-12 flex flex-col items-center">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
         <div v-for="(category, index) in categories" :key="category.title" class="flex flex-col items-center">
           <!-- Clickable Image Navigating to Respective Page -->
           <router-link :to="category.route">
             <div
-              class="relative w-72 h-80 rounded-xl overflow-hidden shadow-lg animate-floating cursor-pointer hover:scale-105 transition-transform duration-300"
+              class="relative w-64 h-72 rounded-xl overflow-hidden shadow-lg animate-floating cursor-pointer hover:scale-105 transition-transform duration-300"
               :class="index % 2 === 0 ? 'animate-delay-1' : 'animate-delay-2'"
             >
               <img :src="category.image" :alt="category.title" class="w-full h-full object-cover">
@@ -93,8 +93,19 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    this.preloadImages();
+  },
+  methods: {
+    preloadImages() {
+      this.categories.forEach(category => {
+        const img = new Image();
+        img.src = category.image;
+      });
+    }
   }
-};
+}
 </script>
 
 <style scoped>

@@ -19,7 +19,7 @@
         </router-link>
         <router-link
           to="/contact"
-          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-none shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
         >
           Contact Us
         </router-link>
@@ -45,7 +45,7 @@
         </router-link>
         <router-link
           to="/contact"
-          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-none shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
           @click="toggleMenu"
         >
           Contact Us
