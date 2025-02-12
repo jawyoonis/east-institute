@@ -2,63 +2,75 @@
   <div class="container mx-auto px-6 py-12 bg-white">
     <!-- Header Section -->
     <div class="text-center mb-10">
-      <h1 class="text-5xl font-extrabold text-gray-900">Explore Curriculum</h1>
-      <p class="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
+      <h1 class="text-4xl font-extrabold text-gray-900">Explore Curriculum</h1>
+      <p class="text-sm text-gray-500 mt-2">
         100% Remote Learning, Industry Mentorship, Project-Based Learning
       </p>
+    </div>
 
-      <!-- Plan Selection Buttons -->
-      <div class="mt-6 flex justify-center space-x-4">
-        <button
-          class="px-5 py-2 border border-gray-400 text-gray-900 rounded-md hover:bg-gray-100 transition"
-          :class="{ 'bg-black text-white': selectedPlan === 'monthly' }"
-          @click="selectedPlan = 'monthly'"
-        >
-          Monthly Plan
-        </button>
-        <button
-          class="px-5 py-2 border border-gray-400 text-gray-900 rounded-md hover:bg-gray-100 transition"
-          :class="{ 'bg-black text-white': selectedPlan === 'annual' }"
-          @click="selectedPlan = 'annual'"
-        >
-          Annual Plan
-        </button>
-      </div>
+    <!-- Plan Selection Buttons -->
+    <div class="flex justify-center space-x-3 mb-10">
+      <button
+        class="px-5 py-2 text-sm font-semibold border border-gray-300 text-gray-800 rounded-md hover:bg-gray-200 transition"
+        :class="{ 'bg-gray-900 text-white': selectedPlan === 'monthly' }"
+        @click="selectedPlan = 'monthly'"
+      >
+        Monthly Plan
+      </button>
+      <button
+        class="px-5 py-2 text-sm font-semibold border border-gray-300 text-gray-800 rounded-md hover:bg-gray-200 transition"
+        :class="{ 'bg-gray-900 text-white': selectedPlan === 'annual' }"
+        @click="selectedPlan = 'annual'"
+      >
+        Annual Plan
+      </button>
     </div>
 
     <!-- Curriculum Content Section -->
-    <div class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0 md:space-x-10 max-w-5xl mx-auto">
-      <!-- Curriculum Image -->
-      <div class="w-full md:w-1/3 flex justify-center">
-        <img src="@/assets/images/curriculam-1.webp" alt="Curriculum" class="rounded-lg shadow-lg w-full max-w-md">
+    <div class="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto space-y-10 md:space-y-0">
+      <!-- Curriculum Image (Left Side) -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <div class="relative w-full max-w-md">
+          <img src="@/assets/images/curriculam-1.webp" alt="Curriculum" class="rounded-lg shadow-lg w-full object-cover">
+        </div>
       </div>
 
-      <!-- Curriculum Information -->
-      <div class="w-full md:w-2/3">
+      <!-- Curriculum Information (Right Side) -->
+      <div class="w-full md:w-1/2">
         <transition name="fade" mode="out-in">
+          <!-- Monthly Plan Content -->
           <div v-if="selectedPlan === 'monthly'" key="monthly">
-            <div class="border-l-4 border-gray-900 pl-6">
-              <h2 class="text-2xl font-bold text-gray-900">Monthly Plan</h2>
-              <p class="text-gray-600 mt-1">Enjoy flexible learning options with our monthly plan.</p>
-              <ul class="mt-4 text-gray-700 space-y-2">
-                <li>Access to all courses</li>
-                <li>Live mentorship sessions</li>
-                <li>Career support</li>
-                <li>Community networking</li>
-              </ul>
+            <div class="mb-6">
+              <h2 class="text-lg font-bold text-gray-900 border-l-4 border-gray-900 pl-4">Accelerated Learning</h2>
+              <p class="text-gray-600 text-sm mt-1 pl-4">Fast-Tracked and Affordable Remote Education</p>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-lg font-bold text-gray-900 border-l-4 border-gray-900 pl-4">Business Education</h2>
+              <p class="text-gray-600 text-sm mt-1 pl-4">Expert-Led Business Courses</p>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-lg font-bold text-gray-900 border-l-4 border-gray-900 pl-4">Entrepreneurship Focus</h2>
+              <p class="text-gray-600 text-sm mt-1 pl-4">Hands-on Entrepreneurship Training</p>
             </div>
           </div>
 
+          <!-- Annual Plan Content -->
           <div v-else key="annual">
-            <div class="border-l-4 border-gray-900 pl-6">
-              <h2 class="text-2xl font-bold text-gray-900">Annual Plan</h2>
-              <p class="text-gray-600 mt-1">Commit for a year and enjoy additional benefits.</p>
-              <ul class="mt-4 text-gray-700 space-y-2">
-                <li>Everything in Monthly Plan</li>
-                <li>Exclusive one-on-one mentorship</li>
-                <li>Personalized career guidance</li>
-                <li>Free access to workshops & masterclasses</li>
-              </ul>
+            <div class="mb-6">
+              <h2 class="text-lg font-bold text-gray-900 border-l-4 border-gray-900 pl-4">Comprehensive Business Training</h2>
+              <p class="text-gray-600 text-sm mt-1 pl-4">Gain In-Depth Knowledge in Finance, Marketing & Leadership</p>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-lg font-bold text-gray-900 border-l-4 border-gray-900 pl-4">Entrepreneurship Excellence</h2>
+              <p class="text-gray-600 text-sm mt-1 pl-4">From Ideation to Scaling a Profitable Startup</p>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-lg font-bold text-gray-900 border-l-4 border-gray-900 pl-4">Technology Mastery</h2>
+              <p class="text-gray-600 text-sm mt-1 pl-4">Learn AI, Full-Stack Development, and Blockchain Technologies</p>
             </div>
           </div>
         </transition>

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 h-20 flex justify-between items-center">
       <!-- Logo & Institute Name -->
       <div class="flex items-center space-x-4">
-        <img src="@/assets/images/logo1.png" alt="EAST Institute Logo" class="rounded-full h-14 w-14" />
+        <img src="@/assets/images/institute-logo.png" alt="EAST Institute Logo" class="rounded-full h-14 w-14" />
         <h1 class="text-lg font-extrabold text-gray-900 whitespace-nowrap">EAST INSTITUTE</h1>
       </div>
 
@@ -19,7 +19,7 @@
         </router-link>
         <router-link
           to="/contact"
-          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-none shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+          class="bg-black text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
         >
           Contact Us
         </router-link>
@@ -45,7 +45,7 @@
         </router-link>
         <router-link
           to="/contact"
-          class="bg-black text-white px-2 py-1 text-xs font-bold rounded-none shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+          class="bg-black text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
           @click="toggleMenu"
         >
           Contact Us
