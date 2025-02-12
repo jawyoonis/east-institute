@@ -28,6 +28,12 @@ const routes = [
     name: 'Curriculum',
     component: () => import('@/views/CurriculumPage.vue'),
   },
+  {
+    path: "/apply",
+    name: "Apply",
+    component: () => import("../components/curriculums/Apply.vue"),
+  },
+
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ];
 
