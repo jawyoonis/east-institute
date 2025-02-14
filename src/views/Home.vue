@@ -19,17 +19,16 @@
     <section class="mt-12 mb-16 px-6 sm:px-12 flex flex-col items-center">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
         <div v-for="(category, index) in categories" :key="category.title" class="flex flex-col items-center">
-          <!-- Clickable Image Navigating to Respective Page -->
           <router-link :to="category.route">
             <div class="relative w-64 h-72 rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
-              <img :src="category.image" :alt="category.title" class="w-full h-full object-cover">
+              <!-- Remove Lazy Loading -->
+              <img :src="category.image" :alt="category.title" class="w-full h-full object-cover" loading="eager" fetchpriority="high">
               <div class="absolute bottom-0 w-full bg-black bg-opacity-50 p-3 text-white text-lg font-bold text-center">
                 {{ category.title }}
               </div>
             </div>
           </router-link>
 
-          <!-- Styled and Animated Text -->
           <div class="mt-4 text-center text-gray-800 text-lg font-medium tracking-wide">
             <p v-for="text in category.description" :key="text" class="mb-2">
               {{ text }}
@@ -89,6 +88,17 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    this.preloadImages();
+  },
+  methods: {
+    preloadImages() {
+      this.categories.forEach(category => {
+        const img = new Image();
+        img.src = category.image;
+      });
+    }
   }
 }
 </script>
