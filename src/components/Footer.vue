@@ -10,7 +10,7 @@
       <div class="mt-2 flex justify-center space-x-4">
         <router-link to="/" class="text-sm hover:text-gray-400">Home</router-link>
         <router-link to="/about" class="text-sm hover:text-gray-400">About</router-link>
-        <router-link to="/blog" class="text-sm hover:text-gray-400">Blog</router-link>
+        <router-link to="/media" class="text-sm hover:text-gray-400">Media</router-link>
         <!-- Removed 'Waitlist', 'Courses', 'Curriculum', 'Contact', and 'Admin Dashboard' links -->
       </div>
       <!-- Social Media Icons -->
