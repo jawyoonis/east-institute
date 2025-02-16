@@ -1,5 +1,4 @@
-
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import CourseList from '../views/CourseList.vue';
 import CourseDetail from '../views/CourseDetail.vue';
@@ -15,30 +14,23 @@ const routes = [
   { path: '/waitlist', name: 'Waitlist', component: () => import('../views/Waitlist.vue') },
   { path: '/courses', name: 'Courses', component: CourseList },
   { path: '/courses/:id', name: 'CourseDetail', component: CourseDetail, props: true },
-  {path:'/Contact',name:'Contact',component: () => import('../views/Contact.vue')},
-  {path:'/AdminDashboard',name:'AdminDashboard',component: () => import('../views/AdminDashboard.vue')},
+  { path: '/contact', name: 'Contact', component: () => import('../views/Contact.vue') },
+  { path: '/admin-dashboard', name: 'AdminDashboard', component: () => import('../views/AdminDashboard.vue') },
 
   { path: '/technology', name: 'Technology', component: Technology },
   { path: '/business-info', name: 'BusinessInfo', component: BusinessInfo },
   { path: '/entrepreneurship', name: 'Entrepreneurship', component: Entrepreneurship },
   { path: '/payment', name: 'Payment', component: PaymentPage },
 
-  {
-    path: '/curriculum',
-    name: 'Curriculum',
-    component: () => import('@/views/CurriculumPage.vue'),
-  },
-  {
-    path: "/apply",
-    name: "Apply",
-    component: () => import("../components/curriculums/Apply.vue"),
-  },
+  { path: '/curriculum', name: 'Curriculum', component: () => import('@/views/CurriculumPage.vue') },
+  { path: "/apply", name: "Apply", component: () => import("../components/curriculums/Apply.vue") },
 
+  // Redirect unknown routes to Home
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), // ✅ Switch to hash history for GitHub Pages
   routes
 });
 

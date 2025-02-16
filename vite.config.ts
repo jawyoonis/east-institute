@@ -3,9 +3,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
+// Ensure correct public path for GitHub Pages deployment
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/east-institute/' : '/',
+  base: '/east-institute/', // ✅ Set base to your repository name
   plugins: [
     vue(),
     vueDevTools(),
@@ -14,5 +14,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
+  },
+  build: {
+    outDir: 'dist', // Ensure Vite outputs to `dist/`
+    sourcemap: false,
+  },
+  server: {
+    host: true,
+    port: 5173, // Ensure local development works
   },
 })
