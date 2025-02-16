@@ -23,7 +23,7 @@
           to="/login"
           class="bg-blue-600 text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:bg-blue-700 transition"
         >
-          Login
+          Log In
         </router-link>
 
         <!-- Contact Us Button -->
@@ -60,7 +60,7 @@
           class="bg-blue-600 text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:bg-blue-700 transition"
           @click="toggleMenu"
         >
-          Login
+          Log In
         </router-link>
 
         <!-- Mobile Contact Us Button -->

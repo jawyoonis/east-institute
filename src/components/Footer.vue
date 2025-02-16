@@ -4,7 +4,7 @@
       <!-- Logo and Institute Name -->
       <div class="flex justify-center items-center space-x-2 mb-2">
         <img src="/favicon.ico" alt="EAST Institute Logo" class="h-12 w-12" />
-        <p class="text-lg font-semibold">EAST INSTITUTE</p>
+        <p class="text-lg font-semibold">EAST COLLEGE</p>
       </div>
       <!-- Navigation Links -->
       <div class="mt-2 flex justify-center space-x-4">
