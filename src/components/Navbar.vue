@@ -66,7 +66,7 @@ export default {
         { name: 'About', path: '/about' },
         { name: 'Media', path: '/media' },
         { name: 'Curriculum', path: '/curriculum' },
-        { name: 'Admin Dashboard', path: '/admindashboard' },
+        { name: 'Admin Dashboard', path: '/admin-dashboard' },
       ],
     };
   },
