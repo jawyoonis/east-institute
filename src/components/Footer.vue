@@ -3,7 +3,7 @@
     <div class="container mx-auto text-center">
       <!-- Logo and Institute Name -->
       <div class="flex justify-center items-center space-x-2 mb-2">
-        <img src="@/assets/images/logo1.png" alt="EAST Institute Logo" class="h-10 w-10" />
+        <img src="@/assets/images/logo.png" alt="EAST Institute Logo" class="h-10 w-10" />
         <p class="text-lg font-semibold">EAST INSTITUTE</p>
       </div>
       <!-- Navigation Links -->
