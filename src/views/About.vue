@@ -34,11 +34,11 @@
         <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">Our Leadership Team</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
           <div class="bg-white p-6 rounded-lg shadow text-center">
-            <h3 class="text-xl font-semibold text-gray-900">Mohamed Gargaar</h3>
+            <h3 class="text-xl font-semibold text-gray-900">Abdi Aar</h3>
             <p class="text-gray-600 text-sm">Founder & CEO</p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow text-center">
-            <h3 class="text-xl font-semibold text-gray-900">Abdi Aar</h3>
+            <h3 class="text-xl font-semibold text-gray-900">Mohamed Gargaar</h3>
             <p class="text-gray-600 text-sm">Head of Curriculum</p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow text-center">
