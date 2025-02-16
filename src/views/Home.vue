@@ -2,14 +2,14 @@
   <main v-if="imagesLoaded" class="relative min-h-screen flex flex-col justify-between bg-white font-tech pt-24">
     <!-- Hero Section -->
     <section class="flex flex-col items-center justify-center text-center flex-grow px-4 sm:px-6">
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
         Bridging the Industry-Education Gap
       </h1>
-      <p class="mt-4 text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl">
+      <p class="mt-3 text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl">
         Practical education in technology, business, and innovation to help you succeed.
       </p>
       <router-link to="/curriculum">
-        <button class="mt-6 px-4 py-2 bg-black text-white rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+        <button class="mt-6 px-5 py-3 bg-black text-white rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
           Explore Curriculum
         </button>
       </router-link>

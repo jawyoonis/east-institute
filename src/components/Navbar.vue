@@ -64,7 +64,7 @@ export default {
       navigation: [
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
-        { name: 'Blog', path: '/blog' },
+        { name: 'Media', path: '/media' },
         { name: 'Curriculum', path: '/curriculum' },
         { name: 'Admin Dashboard', path: '/admindashboard' },
       ],
