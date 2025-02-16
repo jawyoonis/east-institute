@@ -25,7 +25,7 @@
       </div>
       <!-- Copyright Notice -->
       <div class="mt-2 text-sm text-gray-400">
-        &copy; 2025 EAST Institute. All rights reserved.
+        &copy; 2025 EAST COLLEGE. All rights reserved.
       </div>
     </div>
   </footer>
