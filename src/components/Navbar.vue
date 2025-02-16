@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 h-20 flex justify-between items-center">
       <!-- Logo & Institute Name -->
       <div class="flex items-center space-x-4">
-        <img src="@/assets/images/transparent.png" alt="EAST Institute Logo" class="rounded-full h-14 w-14" />
+        <img src="@/assets/images/logo1.png" alt="EAST Institute Logo" class="rounded-full h-14 w-14" />
         <h1 class="text-lg font-extrabold text-gray-900 whitespace-nowrap">EAST COLLEGE</h1>
       </div>
 
