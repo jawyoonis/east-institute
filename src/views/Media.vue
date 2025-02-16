@@ -65,7 +65,7 @@ export default {
         },
         {
           id: 2,
-          title: "East Institute Partners with Global Universities",
+          title: "East College Partners with Global Universities",
           category: "Latest News",
           date: "February 10, 2024",
           content:

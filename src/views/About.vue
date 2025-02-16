@@ -1,92 +1,99 @@
 <template>
-    <div class="flex justify-center items-center min-h-screen bg-white">
-      <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-6">About Us</h1>
+  <div class="min-h-screen bg-white flex justify-center items-center">
+    <div class="max-w-6xl w-full mx-auto px-6 sm:px-8 lg:px-10 py-16">
+      <!-- Page Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">About Us</h1>
+        <p class="text-lg text-gray-600 mt-3 max-w-3xl mx-auto">
+          Empowering students with high-quality, accessible education in technology, business, and entrepreneurship.
+        </p>
+      </div>
 
-        <!-- Our Mission -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
-          <p class="text-gray-700 leading-relaxed">
-            East Institute is a nonprofit organization dedicated to providing accessible, high-quality online education
-            for students in East Africa. Our goal is to bridge the education gap by using technology to
-            deliver impactful learning experiences. We focus on STEM, business, and entrepreneurship, empowering students
-            to build a better future.
-          </p>
-        </section>
+      <!-- Our Mission -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">Our Mission</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mt-3">
+          East College is a nonprofit organization committed to providing accessible, high-quality online education
+          to students across East Africa. Our goal is to bridge the education gap through technology-driven learning,
+          offering students the tools they need to succeed in STEM, business, and entrepreneurship.
+        </p>
+      </section>
 
-        <!-- Our Story -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Story</h2>
-          <p class="text-gray-700 leading-relaxed">
-            Founded in 2023, East Institute started as a volunteer-led initiative aimed at offering free and affordable education
-            to students in underserved communities. Over time, we expanded to fully online courses while also establishing
-            learning centers in key locations across East Africa to support both virtual and in-person learning.
-          </p>
-        </section>
+      <!-- Our Story -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">Our Story</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mt-3">
+          Founded in 2023, East College began as a volunteer initiative to provide affordable education to students
+          in underserved communities. Over time, we expanded to a fully online learning platform, with local support
+          centers in major East African cities, ensuring both digital and in-person learning opportunities.
+        </p>
+      </section>
 
-        <!-- Our Team -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Team</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="team-member bg-white p-6 rounded-lg shadow text-center">
-              <h3 class="text-xl font-semibold text-gray-900">John Doe</h3>
-              <p class="text-gray-600">Founder & CEO</p>
-            </div>
-            <div class="team-member bg-white p-6 rounded-lg shadow text-center">
-              <h3 class="text-xl font-semibold text-gray-900">Jane Smith</h3>
-              <p class="text-gray-600">Head of Curriculum</p>
-            </div>
-            <div class="team-member bg-white p-6 rounded-lg shadow text-center">
-              <h3 class="text-xl font-semibold text-gray-900">Ahmed Yusuf</h3>
-              <p class="text-gray-600">Technology Lead</p>
-            </div>
+      <!-- Our Team -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">Our Leadership Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <h3 class="text-xl font-semibold text-gray-900">Mohamed Gargaar</h3>
+            <p class="text-gray-600 text-sm">Founder & CEO</p>
           </div>
-        </section>
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <h3 class="text-xl font-semibold text-gray-900">Abdi Aar</h3>
+            <p class="text-gray-600 text-sm">Head of Curriculum</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow text-center">
+            <h3 class="text-xl font-semibold text-gray-900">Ahmed Yusuf</h3>
+            <p class="text-gray-600 text-sm">Technology Lead</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Our Courses -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Curriculum</h2>
-          <p class="text-gray-700 leading-relaxed">
-            We offer a diverse curriculum focused on STEM, business, entrepreneurship, and technology.
-            Our courses are designed to be practical and industry-relevant, helping students gain
-            real-world skills that prepare them for higher education and job opportunities.
-          </p>
-        </section>
+      <!-- Our Courses -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">Our Curriculum</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mt-3">
+          Our programs focus on **STEM, business, and entrepreneurship**, equipping students with in-demand skills.
+          We provide structured, **industry-relevant** courses that prepare learners for careers in technology,
+          leadership, and digital innovation.
+        </p>
+      </section>
 
-        <!-- Testimonials -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">What Students Say</h2>
-          <div class="bg-white p-6 rounded-lg shadow mb-6">
+      <!-- Student Testimonials -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">What Students Say</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
             <p class="text-gray-700 italic">
-              "East Institute's online courses helped me learn coding, and now I work in tech.
+              "East College's online courses helped me learn coding, and now I work in tech.
               The mentorship and structured courses gave me the confidence to succeed."
             </p>
-            <p class="text-gray-900 font-semibold mt-2">Fatima Mohammed, Kenya</p>
+            <p class="text-gray-900 font-semibold mt-3">— Fatima Mohammed, Kenya</p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
             <p class="text-gray-700 italic">
               "Through the business courses, I started my own company.
               The combination of online lessons and local learning centers made all the difference."
             </p>
-            <p class="text-gray-900 font-semibold mt-2">Samuel Otieno, Uganda</p>
+            <p class="text-gray-900 font-semibold mt-3">— Samuel Otieno, Uganda</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Contact Us -->
-        <section>
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
-          <p class="text-gray-700 leading-relaxed">
-            We’d love to hear from you. Reach out to us at
-            <a href="mailto:info@eastinstitute.org" class="text-blue-500">info@eastinstitute.org</a>
-            or follow us on social media.
-          </p>
-        </section>
-      </div>
+      <!-- Contact Us -->
+      <section>
+        <h2 class="text-3xl font-semibold text-gray-800 border-l-4 border-gray-900 pl-4">Contact Us</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mt-3">
+          We’d love to hear from you. Reach out to us at
+          <a href="mailto:info@eastcollege.org" class="text-blue-500 font-medium">eastcollege.org</a>
+          or follow us on social media.
+        </p>
+      </section>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script>
-  export default {
-    name: 'About',
-  };
-  </script>
+<script>
+export default {
+  name: 'About',
+};
+</script>
