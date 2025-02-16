@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 h-20 flex justify-between items-center">
       <!-- Logo & Institute Name -->
       <div class="flex items-center space-x-4">
-        <img src="/favicon.ico" alt="EAST Institute Logo" class="h-12 w-12" />
+        <img src="/favicon.ico" alt="EAST College Logo" class="h-12 w-12" />
         <h1 class="text-lg font-extrabold text-gray-900 whitespace-nowrap">EAST COLLEGE</h1>
       </div>
 
@@ -17,6 +17,16 @@
         >
           {{ link.name }}
         </router-link>
+
+        <!-- Login Button -->
+        <router-link
+          to="/login"
+          class="bg-blue-600 text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:bg-blue-700 transition"
+        >
+          Login
+        </router-link>
+
+        <!-- Contact Us Button -->
         <router-link
           to="/contact"
           class="bg-black text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
@@ -43,6 +53,17 @@
         >
           {{ link.name }}
         </router-link>
+
+        <!-- Mobile Login Button -->
+        <router-link
+          to="/login"
+          class="bg-blue-600 text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:bg-blue-700 transition"
+          @click="toggleMenu"
+        >
+          Login
+        </router-link>
+
+        <!-- Mobile Contact Us Button -->
         <router-link
           to="/contact"
           class="bg-black text-white px-3 py-1 text-xs font-bold rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"

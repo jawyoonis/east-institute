@@ -6,6 +6,8 @@ import Technology from '@/components/curriculums/Technology.vue';
 import BusinessInfo from '@/components/curriculums/BusinessInfo.vue';
 import Entrepreneurship from '@/components/curriculums/Entrepreneurship.vue';
 import PaymentPage from '@/views/PaymentPage.vue';
+import Login from '../views/Login.vue';
+import Signup from '../views/Signup.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -24,6 +26,8 @@ const routes = [
 
   { path: '/curriculum', name: 'Curriculum', component: () => import('@/views/CurriculumPage.vue') },
   { path: "/apply", name: "Apply", component: () => import("../components/curriculums/Apply.vue") },
+  { path: '/login', name: 'Login', component: Login },
+  { path: '/signup', name: 'Signup', component: Signup },
 
   // Redirect unknown routes to Home
   { path: '/:pathMatch(.*)*', redirect: '/' },
